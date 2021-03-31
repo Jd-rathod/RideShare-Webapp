@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+    function phonenumber(inputtxt)
+    {
+        var phoneno = /^\(?([0-9]{5})\)?[-. ]?([0-9]{5})$/;
+        if((inputtxt.value.match(phoneno))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    function Validate() {
+        if(document.getElementById("name").value=="")
+        {
+            alert("Please enter your Name!");
+            document.getElementById("name").focus();
+            return false;
+        }
+        if(document.getElementById("email").value=="" || strlen(document.getElementById("email"))>30 )
+        {
+            alert("Email_Id Should not be empty and it's length should not more than 30");
+            document.getElementById("email").focus();
+            return false;
+        }
+        if(document.getElementById("pass").value=="")
+        {
+            alert("Please Enter Password!");
+            document.getElementById("pass").focus();
+            return false;
+        }
+        if(document.getElementById("re_pass").value=="")
+        {
+            alert("Password verification required!");
+            document.getElementById("re_pass").focus();
+            return false;
+        }
+        var password = document.getElementById("pass").value;
+        var confirmPassword = document.getElementById("re_pass").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            document.getElementById("re_pass").value="";
+            document.getElementById("re_pass").focus();
+            return false;
+        }
+        if(document.getElementById("phno").value=="")
+        {
+            alert("Please enter your phone no");
+            document.getElementById("phno").focus();
+            return false;
+        }
+        if(strlen(document.getElementById("phno"))!=10 || !(phonenumber(document.getElementById("phno"))))
+        {
+            alert("Phone number must have 10 digits!");
+            document.getElementById("phno").focus();
+            return false;
+        }
+        if(document.getElementById("adhar").value=="")
+        {
+            alert("Please enter your Adhar no!");
+            document.getElementById("adhar").focus();
+            return false;
+        }
+        if(strlen(document.getElementById("adhar"))!=12 || !(phonenumber(document.getElementById("adhar"))))
+        {
+            alert("Adhar no must have 12 digits!");
+            document.getElementById("adhar").focus();
+            return false;
+        }
+        return true;
+    }
+    </script>
+    /* <script type="text/javascript">
+        function check()
+        {
+        
+         if(document.register-form.name.value=="")
+          {
+            alert("Plese Enter Your Name");
+            document.register-form.name.focus();
+            return false;
+          }
+         
+         if(document.register-form.pass.value=="")
+          {
+            alert("Plese Enter Your Password");
+            document.getElementById("pass").focus();
+            return false;
+          } 
+          if(document.register-form.re_pass.value=="")
+          {
+            alert("Plese Enter Confirm Password");
+            document.getElementById("re_pass").focus();
+            return false;
+          }
+          if(document.register-form.pass.value!=document.register-form.re_pass.value)
+          {
+            alert("Confirm Password does not matched");
+            document.getElementById("re_pass").focus();
+            return false;
+          }
+          if(document.register-form.adhar.value=="")
+          {
+            alert("Plese Enter Your Name");
+            document.getElementById("adhar").focus();
+            return false;
+          }
+          if(document.register-form.phno.value=="")
+          {
+            alert("Plese Enter Contact No");
+	        document.getElementById("phno").focus();
+	        return false;
+          }
+          if(document.register-form.email.value=="")
+          {
+            alert("Plese Enter your Email Address");
+	        document.getElementById("email").focus();
+	        return false;
+          }
+        e=document.getElementById("email").value;
+		f1=e.indexOf('@');
+		f2=e.indexOf('@',f1+1);
+		e1=e.indexOf('.');
+		e2=e.indexOf('.',e1+1);
+		n=e.length;
+
+		if(!(f1>0 && f2==-1 && e1>0 && e2==-1 && f1!=e1+1 && e1!=f1+1 && f1!=n-1 && e1!=n-1))
+		{
+			alert("Please Enter valid Email");
+			document.getElementById("email").focus();
+			return false;
+		}
+        return true;
+        }
+    </script> */
+</head>
+<body>
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" name="register-form" class="register-form" id="register-form" action="viewtable.php" onSubmit="return Validate()">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                            </div>
+                            <div>
+                                <h3 class="form-title">Personal Info</h4>
+                            </div>
+                            <div class="form-group">
+                                <label for="phno"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="text" name="phno" id="phno" placeholder="Your Phone no." required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="adhar"><i class="zmdi zmdi-star"></i></label>
+                                <input type="text" name="adhar" id="adhar" placeholder="Your Adhar no." required/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                                <span style="text-decoration-color: red;">Hello</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="#" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="#" class="signup-image-link">Create an account</a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Sign in</h2>
+                        <form method="POST" class="register-form" action="login.php" id="login-form">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="your_name" id="your_name" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
