@@ -11,6 +11,6 @@ To use all of these services you need to have an account as normal user. If you 
 
 If you need an instant ride you can see available rides and can join one of them. If you have group of collegues from nearby area then you can make a group and daily use pool services. To join a group you can see available groups as per your route and join one of them.
 
-To get an idea how it is actually working you can explore the **Project_images** folder and see some of the screenshots.
+To get an idea how it is actually working you can explore the **Webapp_images** folder and see some of the screenshots.
 
 **Note** -- This webapp is developed for education purpose and it is still under development, If you are willing to contribute to it you can make a request.
