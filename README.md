@@ -13,4 +13,4 @@ If you need an instant ride you can see available rides and can join one of them
 
 To get an idea how it is actually working you can explore the **Project_images** folder and see some of the screenshots.
 
-**Note** -- If you are willing to improve it you can make a request.
+**Note** -- This webapp is developed for education purpose and it is still under development, If you are willing to contribute to it you can make a request.
